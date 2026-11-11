@@ -18,7 +18,7 @@ SOURCE = ROOT / "src" / "ChordMonitor++.maxpat"
 DIST = ROOT / "dist"
 TARGET = DIST / "ChordMonitor++.amxd"
 DEVICE_FILE = "ChordMonitor++.amxd"
-DESCRIPTION = ("ChordMonitor++ {version} by danielknng. Names the chord played, its inversion and "
+DESCRIPTION = ("ChordMonitor++ {version}. Names the chord played, its inversion and "
                "alternatives, and its degree in a chosen key. Runs on Push 3 standalone.")
 
 MENU_PADDING = " " * 12
