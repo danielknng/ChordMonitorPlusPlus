@@ -1,0 +1,3 @@
+*.maxpat text eol=lf
+*.py text eol=lf
+*.amxd binary
