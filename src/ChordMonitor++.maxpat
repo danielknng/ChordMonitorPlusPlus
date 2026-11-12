@@ -45,7 +45,7 @@
 		"enablehscroll": 1,
 		"enablevscroll": 1,
 		"devicewidth": 0.0,
-		"description": "ChordMonitor++ dev by danielknng. Names the chord played, its inversion and alternatives, and its degree in a chosen key. Runs on Push 3 standalone.",
+		"description": "ChordMonitor++ dev. Names the chord played, its inversion and alternatives, and its degree in a chosen key. Runs on Push 3 standalone.",
 		"digest": "",
 		"tags": "",
 		"style": "",
@@ -142,42 +142,6 @@
 						20.0
 					],
 					"text": "edit 0 Waiting..."
-				}
-			},
-			{
-				"box": {
-					"id": "obj-21",
-					"maxclass": "message",
-					"numinlets": 2,
-					"numoutlets": 1,
-					"outlettype": [
-						""
-					],
-					"patching_rect": [
-						896.6666452884674,
-						1184.9999717473984,
-						37.0,
-						20.0
-					],
-					"text": "set $1"
-				}
-			},
-			{
-				"box": {
-					"id": "obj-20",
-					"maxclass": "message",
-					"numinlets": 2,
-					"numoutlets": 1,
-					"outlettype": [
-						""
-					],
-					"patching_rect": [
-						889.1666454672813,
-						1010.8333092331886,
-						37.0,
-						20.0
-					],
-					"text": "set $1"
 				}
 			},
 			{
@@ -404,24 +368,6 @@
 			},
 			{
 				"box": {
-					"id": "obj-16",
-					"maxclass": "message",
-					"numinlets": 2,
-					"numoutlets": 1,
-					"outlettype": [
-						""
-					],
-					"patching_rect": [
-						603.3333189487457,
-						1180.8333051800728,
-						37.0,
-						20.0
-					],
-					"text": "set $1"
-				}
-			},
-			{
-				"box": {
 					"id": "obj-17",
 					"maxclass": "live.menu",
 					"numinlets": 1,
@@ -484,7 +430,7 @@
 						31.0,
 						20.0
 					],
-					"text": "set 0"
+					"text": "0"
 				}
 			},
 			{
@@ -503,24 +449,6 @@
 						20.0
 					],
 					"text": "live.banks"
-				}
-			},
-			{
-				"box": {
-					"id": "obj-51",
-					"maxclass": "message",
-					"numinlets": 2,
-					"numoutlets": 1,
-					"outlettype": [
-						""
-					],
-					"patching_rect": [
-						676.6666505336761,
-						1010.8333092331886,
-						37.0,
-						20.0
-					],
-					"text": "set $1"
 				}
 			},
 			{
@@ -14104,7 +14032,7 @@
 													"id": "obj-15",
 													"maxclass": "outlet",
 													"patching_rect": [
-														200.0,
+														600.0,
 														320.0,
 														30.0,
 														30.0
@@ -23179,78 +23107,6 @@
 			},
 			{
 				"box": {
-					"id": "obj-301",
-					"maxclass": "message",
-					"text": "set $1",
-					"numinlets": 2,
-					"numoutlets": 1,
-					"outlettype": [
-						""
-					],
-					"patching_rect": [
-						1300,
-						1015,
-						45,
-						20
-					]
-				}
-			},
-			{
-				"box": {
-					"id": "obj-303",
-					"maxclass": "message",
-					"text": "set $1",
-					"numinlets": 2,
-					"numoutlets": 1,
-					"outlettype": [
-						""
-					],
-					"patching_rect": [
-						1300,
-						1190,
-						45,
-						20
-					]
-				}
-			},
-			{
-				"box": {
-					"id": "obj-305",
-					"maxclass": "message",
-					"text": "set $1",
-					"numinlets": 2,
-					"numoutlets": 1,
-					"outlettype": [
-						""
-					],
-					"patching_rect": [
-						1420,
-						1190,
-						45,
-						20
-					]
-				}
-			},
-			{
-				"box": {
-					"id": "obj-316",
-					"maxclass": "message",
-					"text": "set $1",
-					"numinlets": 2,
-					"numoutlets": 1,
-					"outlettype": [
-						""
-					],
-					"patching_rect": [
-						1100,
-						1015,
-						45,
-						20
-					]
-				}
-			},
-			{
-				"box": {
 					"id": "obj-318",
 					"maxclass": "message",
 					"text": "0",
@@ -23356,13 +23212,2724 @@
 						1.0
 					]
 				}
+			},
+			{
+				"box": {
+					"id": "obj-340",
+					"maxclass": "newobj",
+					"text": "p locked_menu",
+					"numinlets": 2,
+					"numoutlets": 1,
+					"outlettype": [
+						""
+					],
+					"patching_rect": [
+						676.6666505336761,
+						1010.8333092331886,
+						101.0,
+						22.0
+					],
+					"patcher": {
+						"fileversion": 1,
+						"appversion": {
+							"major": 8,
+							"minor": 6,
+							"revision": 0,
+							"architecture": "x64",
+							"modernui": 1
+						},
+						"classnamespace": "box",
+						"rect": [
+							100.0,
+							100.0,
+							1000.0,
+							800.0
+						],
+						"bglocked": 0,
+						"openinpresentation": 0,
+						"default_fontsize": 12.0,
+						"default_fontface": 0,
+						"default_fontname": "Arial",
+						"gridonopen": 1,
+						"gridsize": [
+							15.0,
+							15.0
+						],
+						"gridsnaponopen": 1,
+						"objectsnaponopen": 1,
+						"statusbarvisible": 2,
+						"toolbarvisible": 1,
+						"lefttoolbarpinned": 0,
+						"toptoolbarpinned": 0,
+						"righttoolbarpinned": 0,
+						"bottomtoolbarpinned": 0,
+						"toolbars_unpinned_last_save": 0,
+						"tallnewobj": 0,
+						"boxanimatetime": 200,
+						"enablehscroll": 1,
+						"enablevscroll": 1,
+						"devicewidth": 0.0,
+						"description": "",
+						"digest": "",
+						"tags": "",
+						"style": "",
+						"subpatcher_template": "",
+						"assistshowspatchername": 0,
+						"boxes": [
+							{
+								"box": {
+									"id": "obj-1",
+									"maxclass": "comment",
+									"patching_rect": [
+										20.0,
+										4.0,
+										520.0,
+										52.0
+									],
+									"text": "Keeps a monitor menu on the detected value. A change from Push or the mouse is answered with the detected value, deferred so it lands after Live has applied the change.",
+									"linecount": 3,
+									"numinlets": 1,
+									"numoutlets": 0
+								}
+							},
+							{
+								"box": {
+									"id": "obj-2",
+									"maxclass": "inlet",
+									"patching_rect": [
+										40.0,
+										60.0,
+										30.0,
+										30.0
+									],
+									"index": 1,
+									"comment": "detected value",
+									"numinlets": 0,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-3",
+									"maxclass": "inlet",
+									"patching_rect": [
+										200.0,
+										60.0,
+										30.0,
+										30.0
+									],
+									"index": 2,
+									"comment": "menu output, any change is undone",
+									"numinlets": 0,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-4",
+									"maxclass": "newobj",
+									"patching_rect": [
+										200.0,
+										100.0,
+										56.0,
+										22.0
+									],
+									"text": "deferlow",
+									"numinlets": 1,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-5",
+									"maxclass": "newobj",
+									"patching_rect": [
+										200.0,
+										130.0,
+										40.0,
+										22.0
+									],
+									"text": "t b",
+									"numinlets": 1,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-6",
+									"maxclass": "newobj",
+									"patching_rect": [
+										40.0,
+										170.0,
+										40.0,
+										22.0
+									],
+									"text": "i",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-7",
+									"maxclass": "message",
+									"patching_rect": [
+										40.0,
+										200.0,
+										48.0,
+										22.0
+									],
+									"text": "set $1",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-8",
+									"maxclass": "outlet",
+									"patching_rect": [
+										40.0,
+										240.0,
+										30.0,
+										30.0
+									],
+									"index": 1,
+									"comment": "set message for the menu",
+									"numinlets": 1,
+									"numoutlets": 0
+								}
+							}
+						],
+						"lines": [
+							{
+								"patchline": {
+									"source": [
+										"obj-2",
+										0
+									],
+									"destination": [
+										"obj-6",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-3",
+										0
+									],
+									"destination": [
+										"obj-4",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-4",
+										0
+									],
+									"destination": [
+										"obj-5",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-5",
+										0
+									],
+									"destination": [
+										"obj-6",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-6",
+										0
+									],
+									"destination": [
+										"obj-7",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-7",
+										0
+									],
+									"destination": [
+										"obj-8",
+										0
+									]
+								}
+							}
+						]
+					},
+					"saved_object_attributes": {
+						"description": "",
+						"digest": "",
+						"globalpatchername": "",
+						"tags": ""
+					}
+				}
+			},
+			{
+				"box": {
+					"id": "obj-341",
+					"maxclass": "newobj",
+					"text": "p locked_menu",
+					"numinlets": 2,
+					"numoutlets": 1,
+					"outlettype": [
+						""
+					],
+					"patching_rect": [
+						889.1666454672813,
+						1010.8333092331886,
+						101.0,
+						22.0
+					],
+					"patcher": {
+						"fileversion": 1,
+						"appversion": {
+							"major": 8,
+							"minor": 6,
+							"revision": 0,
+							"architecture": "x64",
+							"modernui": 1
+						},
+						"classnamespace": "box",
+						"rect": [
+							100.0,
+							100.0,
+							1000.0,
+							800.0
+						],
+						"bglocked": 0,
+						"openinpresentation": 0,
+						"default_fontsize": 12.0,
+						"default_fontface": 0,
+						"default_fontname": "Arial",
+						"gridonopen": 1,
+						"gridsize": [
+							15.0,
+							15.0
+						],
+						"gridsnaponopen": 1,
+						"objectsnaponopen": 1,
+						"statusbarvisible": 2,
+						"toolbarvisible": 1,
+						"lefttoolbarpinned": 0,
+						"toptoolbarpinned": 0,
+						"righttoolbarpinned": 0,
+						"bottomtoolbarpinned": 0,
+						"toolbars_unpinned_last_save": 0,
+						"tallnewobj": 0,
+						"boxanimatetime": 200,
+						"enablehscroll": 1,
+						"enablevscroll": 1,
+						"devicewidth": 0.0,
+						"description": "",
+						"digest": "",
+						"tags": "",
+						"style": "",
+						"subpatcher_template": "",
+						"assistshowspatchername": 0,
+						"boxes": [
+							{
+								"box": {
+									"id": "obj-1",
+									"maxclass": "comment",
+									"patching_rect": [
+										20.0,
+										4.0,
+										520.0,
+										52.0
+									],
+									"text": "Keeps a monitor menu on the detected value. A change from Push or the mouse is answered with the detected value, deferred so it lands after Live has applied the change.",
+									"linecount": 3,
+									"numinlets": 1,
+									"numoutlets": 0
+								}
+							},
+							{
+								"box": {
+									"id": "obj-2",
+									"maxclass": "inlet",
+									"patching_rect": [
+										40.0,
+										60.0,
+										30.0,
+										30.0
+									],
+									"index": 1,
+									"comment": "detected value",
+									"numinlets": 0,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-3",
+									"maxclass": "inlet",
+									"patching_rect": [
+										200.0,
+										60.0,
+										30.0,
+										30.0
+									],
+									"index": 2,
+									"comment": "menu output, any change is undone",
+									"numinlets": 0,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-4",
+									"maxclass": "newobj",
+									"patching_rect": [
+										200.0,
+										100.0,
+										56.0,
+										22.0
+									],
+									"text": "deferlow",
+									"numinlets": 1,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-5",
+									"maxclass": "newobj",
+									"patching_rect": [
+										200.0,
+										130.0,
+										40.0,
+										22.0
+									],
+									"text": "t b",
+									"numinlets": 1,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-6",
+									"maxclass": "newobj",
+									"patching_rect": [
+										40.0,
+										170.0,
+										40.0,
+										22.0
+									],
+									"text": "i",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-7",
+									"maxclass": "message",
+									"patching_rect": [
+										40.0,
+										200.0,
+										48.0,
+										22.0
+									],
+									"text": "set $1",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-8",
+									"maxclass": "outlet",
+									"patching_rect": [
+										40.0,
+										240.0,
+										30.0,
+										30.0
+									],
+									"index": 1,
+									"comment": "set message for the menu",
+									"numinlets": 1,
+									"numoutlets": 0
+								}
+							}
+						],
+						"lines": [
+							{
+								"patchline": {
+									"source": [
+										"obj-2",
+										0
+									],
+									"destination": [
+										"obj-6",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-3",
+										0
+									],
+									"destination": [
+										"obj-4",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-4",
+										0
+									],
+									"destination": [
+										"obj-5",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-5",
+										0
+									],
+									"destination": [
+										"obj-6",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-6",
+										0
+									],
+									"destination": [
+										"obj-7",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-7",
+										0
+									],
+									"destination": [
+										"obj-8",
+										0
+									]
+								}
+							}
+						]
+					},
+					"saved_object_attributes": {
+						"description": "",
+						"digest": "",
+						"globalpatchername": "",
+						"tags": ""
+					}
+				}
+			},
+			{
+				"box": {
+					"id": "obj-342",
+					"maxclass": "newobj",
+					"text": "p locked_menu",
+					"numinlets": 2,
+					"numoutlets": 1,
+					"outlettype": [
+						""
+					],
+					"patching_rect": [
+						1300.0,
+						1015.0,
+						101.0,
+						22.0
+					],
+					"patcher": {
+						"fileversion": 1,
+						"appversion": {
+							"major": 8,
+							"minor": 6,
+							"revision": 0,
+							"architecture": "x64",
+							"modernui": 1
+						},
+						"classnamespace": "box",
+						"rect": [
+							100.0,
+							100.0,
+							1000.0,
+							800.0
+						],
+						"bglocked": 0,
+						"openinpresentation": 0,
+						"default_fontsize": 12.0,
+						"default_fontface": 0,
+						"default_fontname": "Arial",
+						"gridonopen": 1,
+						"gridsize": [
+							15.0,
+							15.0
+						],
+						"gridsnaponopen": 1,
+						"objectsnaponopen": 1,
+						"statusbarvisible": 2,
+						"toolbarvisible": 1,
+						"lefttoolbarpinned": 0,
+						"toptoolbarpinned": 0,
+						"righttoolbarpinned": 0,
+						"bottomtoolbarpinned": 0,
+						"toolbars_unpinned_last_save": 0,
+						"tallnewobj": 0,
+						"boxanimatetime": 200,
+						"enablehscroll": 1,
+						"enablevscroll": 1,
+						"devicewidth": 0.0,
+						"description": "",
+						"digest": "",
+						"tags": "",
+						"style": "",
+						"subpatcher_template": "",
+						"assistshowspatchername": 0,
+						"boxes": [
+							{
+								"box": {
+									"id": "obj-1",
+									"maxclass": "comment",
+									"patching_rect": [
+										20.0,
+										4.0,
+										520.0,
+										52.0
+									],
+									"text": "Keeps a monitor menu on the detected value. A change from Push or the mouse is answered with the detected value, deferred so it lands after Live has applied the change.",
+									"linecount": 3,
+									"numinlets": 1,
+									"numoutlets": 0
+								}
+							},
+							{
+								"box": {
+									"id": "obj-2",
+									"maxclass": "inlet",
+									"patching_rect": [
+										40.0,
+										60.0,
+										30.0,
+										30.0
+									],
+									"index": 1,
+									"comment": "detected value",
+									"numinlets": 0,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-3",
+									"maxclass": "inlet",
+									"patching_rect": [
+										200.0,
+										60.0,
+										30.0,
+										30.0
+									],
+									"index": 2,
+									"comment": "menu output, any change is undone",
+									"numinlets": 0,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-4",
+									"maxclass": "newobj",
+									"patching_rect": [
+										200.0,
+										100.0,
+										56.0,
+										22.0
+									],
+									"text": "deferlow",
+									"numinlets": 1,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-5",
+									"maxclass": "newobj",
+									"patching_rect": [
+										200.0,
+										130.0,
+										40.0,
+										22.0
+									],
+									"text": "t b",
+									"numinlets": 1,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-6",
+									"maxclass": "newobj",
+									"patching_rect": [
+										40.0,
+										170.0,
+										40.0,
+										22.0
+									],
+									"text": "i",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-7",
+									"maxclass": "message",
+									"patching_rect": [
+										40.0,
+										200.0,
+										48.0,
+										22.0
+									],
+									"text": "set $1",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-8",
+									"maxclass": "outlet",
+									"patching_rect": [
+										40.0,
+										240.0,
+										30.0,
+										30.0
+									],
+									"index": 1,
+									"comment": "set message for the menu",
+									"numinlets": 1,
+									"numoutlets": 0
+								}
+							}
+						],
+						"lines": [
+							{
+								"patchline": {
+									"source": [
+										"obj-2",
+										0
+									],
+									"destination": [
+										"obj-6",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-3",
+										0
+									],
+									"destination": [
+										"obj-4",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-4",
+										0
+									],
+									"destination": [
+										"obj-5",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-5",
+										0
+									],
+									"destination": [
+										"obj-6",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-6",
+										0
+									],
+									"destination": [
+										"obj-7",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-7",
+										0
+									],
+									"destination": [
+										"obj-8",
+										0
+									]
+								}
+							}
+						]
+					},
+					"saved_object_attributes": {
+						"description": "",
+						"digest": "",
+						"globalpatchername": "",
+						"tags": ""
+					}
+				}
+			},
+			{
+				"box": {
+					"id": "obj-343",
+					"maxclass": "newobj",
+					"text": "p locked_menu",
+					"numinlets": 2,
+					"numoutlets": 1,
+					"outlettype": [
+						""
+					],
+					"patching_rect": [
+						1100.0,
+						1015.0,
+						101.0,
+						22.0
+					],
+					"patcher": {
+						"fileversion": 1,
+						"appversion": {
+							"major": 8,
+							"minor": 6,
+							"revision": 0,
+							"architecture": "x64",
+							"modernui": 1
+						},
+						"classnamespace": "box",
+						"rect": [
+							100.0,
+							100.0,
+							1000.0,
+							800.0
+						],
+						"bglocked": 0,
+						"openinpresentation": 0,
+						"default_fontsize": 12.0,
+						"default_fontface": 0,
+						"default_fontname": "Arial",
+						"gridonopen": 1,
+						"gridsize": [
+							15.0,
+							15.0
+						],
+						"gridsnaponopen": 1,
+						"objectsnaponopen": 1,
+						"statusbarvisible": 2,
+						"toolbarvisible": 1,
+						"lefttoolbarpinned": 0,
+						"toptoolbarpinned": 0,
+						"righttoolbarpinned": 0,
+						"bottomtoolbarpinned": 0,
+						"toolbars_unpinned_last_save": 0,
+						"tallnewobj": 0,
+						"boxanimatetime": 200,
+						"enablehscroll": 1,
+						"enablevscroll": 1,
+						"devicewidth": 0.0,
+						"description": "",
+						"digest": "",
+						"tags": "",
+						"style": "",
+						"subpatcher_template": "",
+						"assistshowspatchername": 0,
+						"boxes": [
+							{
+								"box": {
+									"id": "obj-1",
+									"maxclass": "comment",
+									"patching_rect": [
+										20.0,
+										4.0,
+										520.0,
+										52.0
+									],
+									"text": "Keeps a monitor menu on the detected value. A change from Push or the mouse is answered with the detected value, deferred so it lands after Live has applied the change.",
+									"linecount": 3,
+									"numinlets": 1,
+									"numoutlets": 0
+								}
+							},
+							{
+								"box": {
+									"id": "obj-2",
+									"maxclass": "inlet",
+									"patching_rect": [
+										40.0,
+										60.0,
+										30.0,
+										30.0
+									],
+									"index": 1,
+									"comment": "detected value",
+									"numinlets": 0,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-3",
+									"maxclass": "inlet",
+									"patching_rect": [
+										200.0,
+										60.0,
+										30.0,
+										30.0
+									],
+									"index": 2,
+									"comment": "menu output, any change is undone",
+									"numinlets": 0,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-4",
+									"maxclass": "newobj",
+									"patching_rect": [
+										200.0,
+										100.0,
+										56.0,
+										22.0
+									],
+									"text": "deferlow",
+									"numinlets": 1,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-5",
+									"maxclass": "newobj",
+									"patching_rect": [
+										200.0,
+										130.0,
+										40.0,
+										22.0
+									],
+									"text": "t b",
+									"numinlets": 1,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-6",
+									"maxclass": "newobj",
+									"patching_rect": [
+										40.0,
+										170.0,
+										40.0,
+										22.0
+									],
+									"text": "i",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-7",
+									"maxclass": "message",
+									"patching_rect": [
+										40.0,
+										200.0,
+										48.0,
+										22.0
+									],
+									"text": "set $1",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-8",
+									"maxclass": "outlet",
+									"patching_rect": [
+										40.0,
+										240.0,
+										30.0,
+										30.0
+									],
+									"index": 1,
+									"comment": "set message for the menu",
+									"numinlets": 1,
+									"numoutlets": 0
+								}
+							}
+						],
+						"lines": [
+							{
+								"patchline": {
+									"source": [
+										"obj-2",
+										0
+									],
+									"destination": [
+										"obj-6",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-3",
+										0
+									],
+									"destination": [
+										"obj-4",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-4",
+										0
+									],
+									"destination": [
+										"obj-5",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-5",
+										0
+									],
+									"destination": [
+										"obj-6",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-6",
+										0
+									],
+									"destination": [
+										"obj-7",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-7",
+										0
+									],
+									"destination": [
+										"obj-8",
+										0
+									]
+								}
+							}
+						]
+					},
+					"saved_object_attributes": {
+						"description": "",
+						"digest": "",
+						"globalpatchername": "",
+						"tags": ""
+					}
+				}
+			},
+			{
+				"box": {
+					"id": "obj-344",
+					"maxclass": "newobj",
+					"text": "p locked_menu",
+					"numinlets": 2,
+					"numoutlets": 1,
+					"outlettype": [
+						""
+					],
+					"patching_rect": [
+						603.3333189487457,
+						1180.8333051800728,
+						101.0,
+						22.0
+					],
+					"patcher": {
+						"fileversion": 1,
+						"appversion": {
+							"major": 8,
+							"minor": 6,
+							"revision": 0,
+							"architecture": "x64",
+							"modernui": 1
+						},
+						"classnamespace": "box",
+						"rect": [
+							100.0,
+							100.0,
+							1000.0,
+							800.0
+						],
+						"bglocked": 0,
+						"openinpresentation": 0,
+						"default_fontsize": 12.0,
+						"default_fontface": 0,
+						"default_fontname": "Arial",
+						"gridonopen": 1,
+						"gridsize": [
+							15.0,
+							15.0
+						],
+						"gridsnaponopen": 1,
+						"objectsnaponopen": 1,
+						"statusbarvisible": 2,
+						"toolbarvisible": 1,
+						"lefttoolbarpinned": 0,
+						"toptoolbarpinned": 0,
+						"righttoolbarpinned": 0,
+						"bottomtoolbarpinned": 0,
+						"toolbars_unpinned_last_save": 0,
+						"tallnewobj": 0,
+						"boxanimatetime": 200,
+						"enablehscroll": 1,
+						"enablevscroll": 1,
+						"devicewidth": 0.0,
+						"description": "",
+						"digest": "",
+						"tags": "",
+						"style": "",
+						"subpatcher_template": "",
+						"assistshowspatchername": 0,
+						"boxes": [
+							{
+								"box": {
+									"id": "obj-1",
+									"maxclass": "comment",
+									"patching_rect": [
+										20.0,
+										4.0,
+										520.0,
+										52.0
+									],
+									"text": "Keeps a monitor menu on the detected value. A change from Push or the mouse is answered with the detected value, deferred so it lands after Live has applied the change.",
+									"linecount": 3,
+									"numinlets": 1,
+									"numoutlets": 0
+								}
+							},
+							{
+								"box": {
+									"id": "obj-2",
+									"maxclass": "inlet",
+									"patching_rect": [
+										40.0,
+										60.0,
+										30.0,
+										30.0
+									],
+									"index": 1,
+									"comment": "detected value",
+									"numinlets": 0,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-3",
+									"maxclass": "inlet",
+									"patching_rect": [
+										200.0,
+										60.0,
+										30.0,
+										30.0
+									],
+									"index": 2,
+									"comment": "menu output, any change is undone",
+									"numinlets": 0,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-4",
+									"maxclass": "newobj",
+									"patching_rect": [
+										200.0,
+										100.0,
+										56.0,
+										22.0
+									],
+									"text": "deferlow",
+									"numinlets": 1,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-5",
+									"maxclass": "newobj",
+									"patching_rect": [
+										200.0,
+										130.0,
+										40.0,
+										22.0
+									],
+									"text": "t b",
+									"numinlets": 1,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-6",
+									"maxclass": "newobj",
+									"patching_rect": [
+										40.0,
+										170.0,
+										40.0,
+										22.0
+									],
+									"text": "i",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-7",
+									"maxclass": "message",
+									"patching_rect": [
+										40.0,
+										200.0,
+										48.0,
+										22.0
+									],
+									"text": "set $1",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-8",
+									"maxclass": "outlet",
+									"patching_rect": [
+										40.0,
+										240.0,
+										30.0,
+										30.0
+									],
+									"index": 1,
+									"comment": "set message for the menu",
+									"numinlets": 1,
+									"numoutlets": 0
+								}
+							}
+						],
+						"lines": [
+							{
+								"patchline": {
+									"source": [
+										"obj-2",
+										0
+									],
+									"destination": [
+										"obj-6",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-3",
+										0
+									],
+									"destination": [
+										"obj-4",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-4",
+										0
+									],
+									"destination": [
+										"obj-5",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-5",
+										0
+									],
+									"destination": [
+										"obj-6",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-6",
+										0
+									],
+									"destination": [
+										"obj-7",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-7",
+										0
+									],
+									"destination": [
+										"obj-8",
+										0
+									]
+								}
+							}
+						]
+					},
+					"saved_object_attributes": {
+						"description": "",
+						"digest": "",
+						"globalpatchername": "",
+						"tags": ""
+					}
+				}
+			},
+			{
+				"box": {
+					"id": "obj-345",
+					"maxclass": "newobj",
+					"text": "p locked_menu",
+					"numinlets": 2,
+					"numoutlets": 1,
+					"outlettype": [
+						""
+					],
+					"patching_rect": [
+						896.6666452884674,
+						1184.9999717473984,
+						101.0,
+						22.0
+					],
+					"patcher": {
+						"fileversion": 1,
+						"appversion": {
+							"major": 8,
+							"minor": 6,
+							"revision": 0,
+							"architecture": "x64",
+							"modernui": 1
+						},
+						"classnamespace": "box",
+						"rect": [
+							100.0,
+							100.0,
+							1000.0,
+							800.0
+						],
+						"bglocked": 0,
+						"openinpresentation": 0,
+						"default_fontsize": 12.0,
+						"default_fontface": 0,
+						"default_fontname": "Arial",
+						"gridonopen": 1,
+						"gridsize": [
+							15.0,
+							15.0
+						],
+						"gridsnaponopen": 1,
+						"objectsnaponopen": 1,
+						"statusbarvisible": 2,
+						"toolbarvisible": 1,
+						"lefttoolbarpinned": 0,
+						"toptoolbarpinned": 0,
+						"righttoolbarpinned": 0,
+						"bottomtoolbarpinned": 0,
+						"toolbars_unpinned_last_save": 0,
+						"tallnewobj": 0,
+						"boxanimatetime": 200,
+						"enablehscroll": 1,
+						"enablevscroll": 1,
+						"devicewidth": 0.0,
+						"description": "",
+						"digest": "",
+						"tags": "",
+						"style": "",
+						"subpatcher_template": "",
+						"assistshowspatchername": 0,
+						"boxes": [
+							{
+								"box": {
+									"id": "obj-1",
+									"maxclass": "comment",
+									"patching_rect": [
+										20.0,
+										4.0,
+										520.0,
+										52.0
+									],
+									"text": "Keeps a monitor menu on the detected value. A change from Push or the mouse is answered with the detected value, deferred so it lands after Live has applied the change.",
+									"linecount": 3,
+									"numinlets": 1,
+									"numoutlets": 0
+								}
+							},
+							{
+								"box": {
+									"id": "obj-2",
+									"maxclass": "inlet",
+									"patching_rect": [
+										40.0,
+										60.0,
+										30.0,
+										30.0
+									],
+									"index": 1,
+									"comment": "detected value",
+									"numinlets": 0,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-3",
+									"maxclass": "inlet",
+									"patching_rect": [
+										200.0,
+										60.0,
+										30.0,
+										30.0
+									],
+									"index": 2,
+									"comment": "menu output, any change is undone",
+									"numinlets": 0,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-4",
+									"maxclass": "newobj",
+									"patching_rect": [
+										200.0,
+										100.0,
+										56.0,
+										22.0
+									],
+									"text": "deferlow",
+									"numinlets": 1,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-5",
+									"maxclass": "newobj",
+									"patching_rect": [
+										200.0,
+										130.0,
+										40.0,
+										22.0
+									],
+									"text": "t b",
+									"numinlets": 1,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-6",
+									"maxclass": "newobj",
+									"patching_rect": [
+										40.0,
+										170.0,
+										40.0,
+										22.0
+									],
+									"text": "i",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-7",
+									"maxclass": "message",
+									"patching_rect": [
+										40.0,
+										200.0,
+										48.0,
+										22.0
+									],
+									"text": "set $1",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-8",
+									"maxclass": "outlet",
+									"patching_rect": [
+										40.0,
+										240.0,
+										30.0,
+										30.0
+									],
+									"index": 1,
+									"comment": "set message for the menu",
+									"numinlets": 1,
+									"numoutlets": 0
+								}
+							}
+						],
+						"lines": [
+							{
+								"patchline": {
+									"source": [
+										"obj-2",
+										0
+									],
+									"destination": [
+										"obj-6",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-3",
+										0
+									],
+									"destination": [
+										"obj-4",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-4",
+										0
+									],
+									"destination": [
+										"obj-5",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-5",
+										0
+									],
+									"destination": [
+										"obj-6",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-6",
+										0
+									],
+									"destination": [
+										"obj-7",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-7",
+										0
+									],
+									"destination": [
+										"obj-8",
+										0
+									]
+								}
+							}
+						]
+					},
+					"saved_object_attributes": {
+						"description": "",
+						"digest": "",
+						"globalpatchername": "",
+						"tags": ""
+					}
+				}
+			},
+			{
+				"box": {
+					"id": "obj-346",
+					"maxclass": "newobj",
+					"text": "p locked_menu",
+					"numinlets": 2,
+					"numoutlets": 1,
+					"outlettype": [
+						""
+					],
+					"patching_rect": [
+						1320.0,
+						1190.0,
+						101.0,
+						22.0
+					],
+					"patcher": {
+						"fileversion": 1,
+						"appversion": {
+							"major": 8,
+							"minor": 6,
+							"revision": 0,
+							"architecture": "x64",
+							"modernui": 1
+						},
+						"classnamespace": "box",
+						"rect": [
+							100.0,
+							100.0,
+							1000.0,
+							800.0
+						],
+						"bglocked": 0,
+						"openinpresentation": 0,
+						"default_fontsize": 12.0,
+						"default_fontface": 0,
+						"default_fontname": "Arial",
+						"gridonopen": 1,
+						"gridsize": [
+							15.0,
+							15.0
+						],
+						"gridsnaponopen": 1,
+						"objectsnaponopen": 1,
+						"statusbarvisible": 2,
+						"toolbarvisible": 1,
+						"lefttoolbarpinned": 0,
+						"toptoolbarpinned": 0,
+						"righttoolbarpinned": 0,
+						"bottomtoolbarpinned": 0,
+						"toolbars_unpinned_last_save": 0,
+						"tallnewobj": 0,
+						"boxanimatetime": 200,
+						"enablehscroll": 1,
+						"enablevscroll": 1,
+						"devicewidth": 0.0,
+						"description": "",
+						"digest": "",
+						"tags": "",
+						"style": "",
+						"subpatcher_template": "",
+						"assistshowspatchername": 0,
+						"boxes": [
+							{
+								"box": {
+									"id": "obj-1",
+									"maxclass": "comment",
+									"patching_rect": [
+										20.0,
+										4.0,
+										520.0,
+										52.0
+									],
+									"text": "Keeps a monitor menu on the detected value. A change from Push or the mouse is answered with the detected value, deferred so it lands after Live has applied the change.",
+									"linecount": 3,
+									"numinlets": 1,
+									"numoutlets": 0
+								}
+							},
+							{
+								"box": {
+									"id": "obj-2",
+									"maxclass": "inlet",
+									"patching_rect": [
+										40.0,
+										60.0,
+										30.0,
+										30.0
+									],
+									"index": 1,
+									"comment": "detected value",
+									"numinlets": 0,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-3",
+									"maxclass": "inlet",
+									"patching_rect": [
+										200.0,
+										60.0,
+										30.0,
+										30.0
+									],
+									"index": 2,
+									"comment": "menu output, any change is undone",
+									"numinlets": 0,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-4",
+									"maxclass": "newobj",
+									"patching_rect": [
+										200.0,
+										100.0,
+										56.0,
+										22.0
+									],
+									"text": "deferlow",
+									"numinlets": 1,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-5",
+									"maxclass": "newobj",
+									"patching_rect": [
+										200.0,
+										130.0,
+										40.0,
+										22.0
+									],
+									"text": "t b",
+									"numinlets": 1,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-6",
+									"maxclass": "newobj",
+									"patching_rect": [
+										40.0,
+										170.0,
+										40.0,
+										22.0
+									],
+									"text": "i",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-7",
+									"maxclass": "message",
+									"patching_rect": [
+										40.0,
+										200.0,
+										48.0,
+										22.0
+									],
+									"text": "set $1",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-8",
+									"maxclass": "outlet",
+									"patching_rect": [
+										40.0,
+										240.0,
+										30.0,
+										30.0
+									],
+									"index": 1,
+									"comment": "set message for the menu",
+									"numinlets": 1,
+									"numoutlets": 0
+								}
+							}
+						],
+						"lines": [
+							{
+								"patchline": {
+									"source": [
+										"obj-2",
+										0
+									],
+									"destination": [
+										"obj-6",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-3",
+										0
+									],
+									"destination": [
+										"obj-4",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-4",
+										0
+									],
+									"destination": [
+										"obj-5",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-5",
+										0
+									],
+									"destination": [
+										"obj-6",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-6",
+										0
+									],
+									"destination": [
+										"obj-7",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-7",
+										0
+									],
+									"destination": [
+										"obj-8",
+										0
+									]
+								}
+							}
+						]
+					},
+					"saved_object_attributes": {
+						"description": "",
+						"digest": "",
+						"globalpatchername": "",
+						"tags": ""
+					}
+				}
+			},
+			{
+				"box": {
+					"id": "obj-347",
+					"maxclass": "newobj",
+					"text": "p locked_menu",
+					"numinlets": 2,
+					"numoutlets": 1,
+					"outlettype": [
+						""
+					],
+					"patching_rect": [
+						1420.0,
+						1190.0,
+						101.0,
+						22.0
+					],
+					"patcher": {
+						"fileversion": 1,
+						"appversion": {
+							"major": 8,
+							"minor": 6,
+							"revision": 0,
+							"architecture": "x64",
+							"modernui": 1
+						},
+						"classnamespace": "box",
+						"rect": [
+							100.0,
+							100.0,
+							1000.0,
+							800.0
+						],
+						"bglocked": 0,
+						"openinpresentation": 0,
+						"default_fontsize": 12.0,
+						"default_fontface": 0,
+						"default_fontname": "Arial",
+						"gridonopen": 1,
+						"gridsize": [
+							15.0,
+							15.0
+						],
+						"gridsnaponopen": 1,
+						"objectsnaponopen": 1,
+						"statusbarvisible": 2,
+						"toolbarvisible": 1,
+						"lefttoolbarpinned": 0,
+						"toptoolbarpinned": 0,
+						"righttoolbarpinned": 0,
+						"bottomtoolbarpinned": 0,
+						"toolbars_unpinned_last_save": 0,
+						"tallnewobj": 0,
+						"boxanimatetime": 200,
+						"enablehscroll": 1,
+						"enablevscroll": 1,
+						"devicewidth": 0.0,
+						"description": "",
+						"digest": "",
+						"tags": "",
+						"style": "",
+						"subpatcher_template": "",
+						"assistshowspatchername": 0,
+						"boxes": [
+							{
+								"box": {
+									"id": "obj-1",
+									"maxclass": "comment",
+									"patching_rect": [
+										20.0,
+										4.0,
+										520.0,
+										52.0
+									],
+									"text": "Keeps a monitor menu on the detected value. A change from Push or the mouse is answered with the detected value, deferred so it lands after Live has applied the change.",
+									"linecount": 3,
+									"numinlets": 1,
+									"numoutlets": 0
+								}
+							},
+							{
+								"box": {
+									"id": "obj-2",
+									"maxclass": "inlet",
+									"patching_rect": [
+										40.0,
+										60.0,
+										30.0,
+										30.0
+									],
+									"index": 1,
+									"comment": "detected value",
+									"numinlets": 0,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-3",
+									"maxclass": "inlet",
+									"patching_rect": [
+										200.0,
+										60.0,
+										30.0,
+										30.0
+									],
+									"index": 2,
+									"comment": "menu output, any change is undone",
+									"numinlets": 0,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-4",
+									"maxclass": "newobj",
+									"patching_rect": [
+										200.0,
+										100.0,
+										56.0,
+										22.0
+									],
+									"text": "deferlow",
+									"numinlets": 1,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-5",
+									"maxclass": "newobj",
+									"patching_rect": [
+										200.0,
+										130.0,
+										40.0,
+										22.0
+									],
+									"text": "t b",
+									"numinlets": 1,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-6",
+									"maxclass": "newobj",
+									"patching_rect": [
+										40.0,
+										170.0,
+										40.0,
+										22.0
+									],
+									"text": "i",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-7",
+									"maxclass": "message",
+									"patching_rect": [
+										40.0,
+										200.0,
+										48.0,
+										22.0
+									],
+									"text": "set $1",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-8",
+									"maxclass": "outlet",
+									"patching_rect": [
+										40.0,
+										240.0,
+										30.0,
+										30.0
+									],
+									"index": 1,
+									"comment": "set message for the menu",
+									"numinlets": 1,
+									"numoutlets": 0
+								}
+							}
+						],
+						"lines": [
+							{
+								"patchline": {
+									"source": [
+										"obj-2",
+										0
+									],
+									"destination": [
+										"obj-6",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-3",
+										0
+									],
+									"destination": [
+										"obj-4",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-4",
+										0
+									],
+									"destination": [
+										"obj-5",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-5",
+										0
+									],
+									"destination": [
+										"obj-6",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-6",
+										0
+									],
+									"destination": [
+										"obj-7",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-7",
+										0
+									],
+									"destination": [
+										"obj-8",
+										0
+									]
+								}
+							}
+						]
+					},
+					"saved_object_attributes": {
+						"description": "",
+						"digest": "",
+						"globalpatchername": "",
+						"tags": ""
+					}
+				}
+			},
+			{
+				"box": {
+					"id": "obj-350",
+					"maxclass": "newobj",
+					"text": "deferlow",
+					"numinlets": 1,
+					"numoutlets": 1,
+					"outlettype": [
+						""
+					],
+					"patching_rect": [
+						1230.0,
+						840.0,
+						60.0,
+						22.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-351",
+					"maxclass": "newobj",
+					"text": "p key_override",
+					"numinlets": 2,
+					"numoutlets": 2,
+					"outlettype": [
+						"",
+						""
+					],
+					"patching_rect": [
+						1240.0,
+						780.0,
+						108.0,
+						22.0
+					],
+					"patcher": {
+						"fileversion": 1,
+						"appversion": {
+							"major": 8,
+							"minor": 6,
+							"revision": 0,
+							"architecture": "x64",
+							"modernui": 1
+						},
+						"classnamespace": "box",
+						"rect": [
+							100.0,
+							100.0,
+							1000.0,
+							800.0
+						],
+						"bglocked": 0,
+						"openinpresentation": 0,
+						"default_fontsize": 12.0,
+						"default_fontface": 0,
+						"default_fontname": "Arial",
+						"gridonopen": 1,
+						"gridsize": [
+							15.0,
+							15.0
+						],
+						"gridsnaponopen": 1,
+						"objectsnaponopen": 1,
+						"statusbarvisible": 2,
+						"toolbarvisible": 1,
+						"lefttoolbarpinned": 0,
+						"toptoolbarpinned": 0,
+						"righttoolbarpinned": 0,
+						"bottomtoolbarpinned": 0,
+						"toolbars_unpinned_last_save": 0,
+						"tallnewobj": 0,
+						"boxanimatetime": 200,
+						"enablehscroll": 1,
+						"enablevscroll": 1,
+						"devicewidth": 0.0,
+						"description": "",
+						"digest": "",
+						"tags": "",
+						"style": "",
+						"subpatcher_template": "",
+						"assistshowspatchername": 0,
+						"boxes": [
+							{
+								"box": {
+									"id": "obj-1",
+									"maxclass": "comment",
+									"patching_rect": [
+										20.0,
+										4.0,
+										520.0,
+										52.0
+									],
+									"text": "Turning Key switches the degree to the device's own key, starting from the mode in use, so the Set's scale stays untouched. Restored values are ignored: the gate opens once the device has loaded.",
+									"linecount": 3,
+									"numinlets": 1,
+									"numoutlets": 0
+								}
+							},
+							{
+								"box": {
+									"id": "obj-2",
+									"maxclass": "newobj",
+									"patching_rect": [
+										40.0,
+										60.0,
+										105.0,
+										22.0
+									],
+									"text": "live.thisdevice",
+									"numinlets": 1,
+									"numoutlets": 3,
+									"outlettype": [
+										"",
+										"",
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-3",
+									"maxclass": "message",
+									"patching_rect": [
+										40.0,
+										90.0,
+										30.0,
+										22.0
+									],
+									"text": "1",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-4",
+									"maxclass": "inlet",
+									"patching_rect": [
+										200.0,
+										60.0,
+										30.0,
+										30.0
+									],
+									"index": 1,
+									"comment": "Key menu output",
+									"numinlets": 0,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-5",
+									"maxclass": "inlet",
+									"patching_rect": [
+										400.0,
+										60.0,
+										30.0,
+										30.0
+									],
+									"index": 2,
+									"comment": "mode in use, 0 = major, 1 = minor",
+									"numinlets": 0,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-6",
+									"maxclass": "newobj",
+									"patching_rect": [
+										200.0,
+										130.0,
+										42.0,
+										22.0
+									],
+									"text": "gate 1",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-7",
+									"maxclass": "newobj",
+									"patching_rect": [
+										200.0,
+										160.0,
+										40.0,
+										22.0
+									],
+									"text": "t b b",
+									"numinlets": 1,
+									"numoutlets": 2,
+									"outlettype": [
+										"",
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-8",
+									"maxclass": "newobj",
+									"patching_rect": [
+										200.0,
+										200.0,
+										40.0,
+										22.0
+									],
+									"text": "i",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-9",
+									"maxclass": "message",
+									"patching_rect": [
+										340.0,
+										200.0,
+										30.0,
+										22.0
+									],
+									"text": "1",
+									"numinlets": 2,
+									"numoutlets": 1,
+									"outlettype": [
+										""
+									]
+								}
+							},
+							{
+								"box": {
+									"id": "obj-10",
+									"maxclass": "outlet",
+									"patching_rect": [
+										200.0,
+										240.0,
+										30.0,
+										30.0
+									],
+									"index": 1,
+									"comment": "manual mode",
+									"numinlets": 1,
+									"numoutlets": 0
+								}
+							},
+							{
+								"box": {
+									"id": "obj-11",
+									"maxclass": "outlet",
+									"patching_rect": [
+										340.0,
+										240.0,
+										30.0,
+										30.0
+									],
+									"index": 2,
+									"comment": "key source, 1 = Manual",
+									"numinlets": 1,
+									"numoutlets": 0
+								}
+							}
+						],
+						"lines": [
+							{
+								"patchline": {
+									"source": [
+										"obj-2",
+										0
+									],
+									"destination": [
+										"obj-3",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-3",
+										0
+									],
+									"destination": [
+										"obj-6",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-4",
+										0
+									],
+									"destination": [
+										"obj-6",
+										1
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-5",
+										0
+									],
+									"destination": [
+										"obj-8",
+										1
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-7",
+										1
+									],
+									"destination": [
+										"obj-8",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-7",
+										0
+									],
+									"destination": [
+										"obj-9",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-8",
+										0
+									],
+									"destination": [
+										"obj-10",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-9",
+										0
+									],
+									"destination": [
+										"obj-11",
+										0
+									]
+								}
+							},
+							{
+								"patchline": {
+									"source": [
+										"obj-6",
+										0
+									],
+									"destination": [
+										"obj-7",
+										0
+									]
+								}
+							}
+						]
+					},
+					"saved_object_attributes": {
+						"description": "",
+						"digest": "",
+						"globalpatchername": "",
+						"tags": ""
+					}
+				}
 			}
 		],
 		"lines": [
 			{
 				"patchline": {
 					"destination": [
-						"obj-17",
+						"obj-344",
 						0
 					],
 					"order": 3,
@@ -23375,7 +25942,7 @@
 			{
 				"patchline": {
 					"destination": [
-						"obj-18",
+						"obj-341",
 						0
 					],
 					"order": 1,
@@ -23388,7 +25955,7 @@
 			{
 				"patchline": {
 					"destination": [
-						"obj-19",
+						"obj-345",
 						0
 					],
 					"order": 0,
@@ -23401,7 +25968,7 @@
 			{
 				"patchline": {
 					"destination": [
-						"obj-44",
+						"obj-340",
 						0
 					],
 					"order": 2,
@@ -23516,7 +26083,7 @@
 						0
 					],
 					"source": [
-						"obj-16",
+						"obj-344",
 						0
 					]
 				}
@@ -23528,7 +26095,7 @@
 						0
 					],
 					"source": [
-						"obj-20",
+						"obj-341",
 						0
 					]
 				}
@@ -23540,7 +26107,7 @@
 						0
 					],
 					"source": [
-						"obj-21",
+						"obj-345",
 						0
 					]
 				}
@@ -23853,7 +26420,7 @@
 						0
 					],
 					"source": [
-						"obj-51",
+						"obj-340",
 						0
 					]
 				}
@@ -24142,7 +26709,7 @@
 						1
 					],
 					"destination": [
-						"obj-51",
+						"obj-340",
 						0
 					]
 				}
@@ -24154,7 +26721,7 @@
 						2
 					],
 					"destination": [
-						"obj-20",
+						"obj-341",
 						0
 					]
 				}
@@ -24166,7 +26733,7 @@
 						3
 					],
 					"destination": [
-						"obj-301",
+						"obj-342",
 						0
 					]
 				}
@@ -24178,7 +26745,7 @@
 						4
 					],
 					"destination": [
-						"obj-16",
+						"obj-344",
 						0
 					]
 				}
@@ -24190,7 +26757,7 @@
 						5
 					],
 					"destination": [
-						"obj-21",
+						"obj-345",
 						0
 					]
 				}
@@ -24214,7 +26781,7 @@
 						7
 					],
 					"destination": [
-						"obj-303",
+						"obj-346",
 						0
 					]
 				}
@@ -24226,7 +26793,7 @@
 						8
 					],
 					"destination": [
-						"obj-305",
+						"obj-347",
 						0
 					]
 				}
@@ -24306,7 +26873,7 @@
 			{
 				"patchline": {
 					"source": [
-						"obj-312",
+						"obj-350",
 						0
 					],
 					"destination": [
@@ -24406,7 +26973,7 @@
 						1
 					],
 					"destination": [
-						"obj-316",
+						"obj-343",
 						0
 					]
 				}
@@ -24414,7 +26981,7 @@
 			{
 				"patchline": {
 					"source": [
-						"obj-301",
+						"obj-342",
 						0
 					],
 					"destination": [
@@ -24426,7 +26993,7 @@
 			{
 				"patchline": {
 					"source": [
-						"obj-303",
+						"obj-346",
 						0
 					],
 					"destination": [
@@ -24438,7 +27005,7 @@
 			{
 				"patchline": {
 					"source": [
-						"obj-305",
+						"obj-347",
 						0
 					],
 					"destination": [
@@ -24450,7 +27017,7 @@
 			{
 				"patchline": {
 					"source": [
-						"obj-316",
+						"obj-343",
 						0
 					],
 					"destination": [
@@ -24466,7 +27033,7 @@
 						0
 					],
 					"destination": [
-						"obj-302",
+						"obj-342",
 						0
 					]
 				}
@@ -24478,7 +27045,7 @@
 						0
 					],
 					"destination": [
-						"obj-304",
+						"obj-346",
 						0
 					]
 				}
@@ -24490,7 +27057,7 @@
 						0
 					],
 					"destination": [
-						"obj-306",
+						"obj-347",
 						0
 					]
 				}
@@ -24502,7 +27069,7 @@
 						0
 					],
 					"destination": [
-						"obj-317",
+						"obj-343",
 						0
 					]
 				}
@@ -24528,6 +27095,162 @@
 					"destination": [
 						"obj-310",
 						1
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-44",
+						0
+					],
+					"destination": [
+						"obj-340",
+						1
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-18",
+						0
+					],
+					"destination": [
+						"obj-341",
+						1
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-302",
+						0
+					],
+					"destination": [
+						"obj-342",
+						1
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-317",
+						0
+					],
+					"destination": [
+						"obj-343",
+						1
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-17",
+						0
+					],
+					"destination": [
+						"obj-344",
+						1
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-19",
+						0
+					],
+					"destination": [
+						"obj-345",
+						1
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-304",
+						0
+					],
+					"destination": [
+						"obj-346",
+						1
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-306",
+						0
+					],
+					"destination": [
+						"obj-347",
+						1
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-312",
+						0
+					],
+					"destination": [
+						"obj-350",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-311",
+						0
+					],
+					"destination": [
+						"obj-351",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-322",
+						1
+					],
+					"destination": [
+						"obj-351",
+						1
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-351",
+						0
+					],
+					"destination": [
+						"obj-322",
+						4
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-351",
+						1
+					],
+					"destination": [
+						"obj-320",
+						0
 					]
 				}
 			}

@@ -35,6 +35,10 @@ Based on ollygs ["Chord Monitor for Push Display 1.0"](https://maxforlive.com/li
 
 Get `ChordMonitor++.amxd` from the [latest release](../../releases/latest).
 
+A release is published automatically when a push to `main` carries a version in `VERSION` that
+has no release yet; its tag is that version with a `v` prefix, e.g. `v1.1.0`, and its text is
+that version's section in [CHANGELOG.md](CHANGELOG.md).
+
 ## Installation
 
 ### Live
@@ -66,3 +70,9 @@ Drop `ChordMonitor++.amxd` on a MIDI track or install it in your `User Library` 
 |------|------------|
 | 1 | Root, Quality, Bass, Degree, Key, Mode, Alt Root, Alt Quality |
 | 2 | Alt2 Root, Alt2 Quality, Key Source |
+
+The chord parameters (Root, Quality, Bass, Degree and the Alt ones) are read only: turning them
+snaps back to the detected chord. Turning Key sets the key for this device only, switches Key
+Source to `Manual` and keeps the current mode; the Live Set's scale is not changed. Mode can be
+changed only with Key Source on `Manual`. Set Key Source back to `Follow Live` to use the Set's
+scale again.
