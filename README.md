@@ -1,5 +1,5 @@
 # ChordMonitor++
-![ChordMonitor++ on Push 3](img/push3.jpeg)
+![ChordMonitor++ on Push 3](img/push3_1.2.0.jpg)
 
 Max for Live MIDI device. Names the chord you play, including inversions, spread and doubled
 voicings and chords with omitted notes, lists other readings of the same notes, and shows the
