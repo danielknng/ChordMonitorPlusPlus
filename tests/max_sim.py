@@ -1,8 +1,11 @@
 """Runs the subset of Max objects the patch uses, with Max's message ordering.
 
 Max fires an object's outlets right to left, and one outlet's connections right
-to left by the destinations' x position. Connections from one outlet to objects
-at the same x position are rejected, so no test depends on how Max breaks that tie.
+to left by the destinations' x position. A subpatcher's inlets and outlets are
+numbered left to right by their x position, whatever index the file stores.
+Messages through deferlow wait until the message that caused them has run through
+the whole patch. Connections from one outlet to objects at the same x position are
+rejected, so no test depends on how Max breaks that tie.
 """
 import ast
 import re
@@ -16,7 +19,7 @@ ARITHMETIC = {
     "==": lambda a, b: int(a == b),
     "!=": lambda a, b: int(a != b),
 }
-SINKS = ("live.menu", "comment")
+SINKS = ("comment",)
 
 
 def parse_atoms(text):
@@ -62,7 +65,8 @@ class Node:
         self.right = self.args[0] if self.name in ARITHMETIC and self.args else 0
         self.zl_list = self.args[1:] if self.name == "zl" else []
         self.collected = []
-        self.gate_outlet = 0
+        self.gate_outlet = self.args[1] if self.name == "gate" and len(self.args) > 1 else 0
+        self.held = 0
         self.items = self.initial_items()
         self.expr_args = [0] * 9
 
@@ -77,6 +81,8 @@ class Node:
     def receive(self, inlet, msg):
         if self.cls in SINKS:
             self.sim.record(self.box, msg)
+        elif self.cls == "live.menu":
+            self.menu(msg)
         elif self.cls == "message":
             self.message(msg)
         elif self.cls == "outlet":
@@ -87,6 +93,15 @@ class Node:
             getattr(self, "do_" + self.name.replace(".", "_"))(inlet, msg)
         else:
             self.sim.unmodelled.add(self.name)
+
+    def menu(self, msg):
+        """A value or a turn sets the menu and reports it; "set" only sets it, as Live parameters do."""
+        if msg[0] == "set":
+            self.sim.record(self.box, msg)
+            return
+        if msg != ["bang"]:
+            self.sim.record(self.box, ["set", msg[0]])
+        self.send(0, [self.sim.records.get(self.box.get("varname") or self.box["id"], ["set", 0])[1]])
 
     def message(self, msg):
         text = self.box["text"].replace("$1", str(msg[0]))
@@ -140,6 +155,15 @@ class Node:
 
     def zl_sort(self, msg):
         self.send(0, sorted(msg))
+
+    def do_i(self, inlet, msg):
+        if msg != ["bang"]:
+            self.held = int(msg[0])
+        if inlet == 0:
+            self.send(0, [self.held])
+
+    def do_deferlow(self, inlet, msg):
+        self.sim.deferred.append((self, msg))
 
     def do_vexpr(self, inlet, msg):
         if inlet == 1:
@@ -224,19 +248,24 @@ class Sim:
         self.nodes, self.wires, self.records = {}, {}, {}
         self.inlets, self.outlets = {}, {}
         self.unmodelled = set()
+        self.deferred = []
         self.load(patcher, prefix="", owner=None)
         for (source, outlet), destinations in self.wires.items():
             self.order(source, destinations)
 
     def load(self, patcher, prefix, owner):
+        for kind in ("inlet", "outlet"):
+            ports = sorted((w["box"] for w in patcher["boxes"] if w["box"]["maxclass"] == kind),
+                           key=lambda box: box["patching_rect"][0])
+            for number, box in enumerate(ports):
+                if kind == "inlet":
+                    self.inlets[(owner, number)] = prefix + box["id"]
+                else:
+                    self.outlets[prefix + box["id"]] = (owner, number)
         for wrapper in patcher["boxes"]:
             box = wrapper["box"]
             key = prefix + box["id"]
             self.nodes[key] = Node(self, key, box)
-            if box["maxclass"] == "inlet":
-                self.inlets[(owner, box["index"] - 1)] = key
-            elif box["maxclass"] == "outlet":
-                self.outlets[key] = (owner, box["index"] - 1)
             if "patcher" in box:
                 self.load(box["patcher"], key + "/", owner=key)
         for line in patcher["lines"]:
@@ -268,6 +297,17 @@ class Sim:
 
     def send(self, key, inlet, msg):
         self.nodes[key].receive(inlet, msg)
+        self.settle()
+
+    def settle(self):
+        while self.deferred:
+            node, msg = self.deferred.pop(0)
+            node.send(0, msg)
+
+    def turn(self, menu_name, value):
+        """The user turning a menu's knob on Push or changing it with the mouse."""
+        key = next(k for k, n in self.nodes.items() if n.box.get("varname") == menu_name)
+        self.send(key, 0, [value])
 
     LIVE_SET_ID = 1
 
@@ -280,9 +320,11 @@ class Sim:
         for node in self.nodes.values():
             if node.name == "live.thisdevice":
                 node.receive(0, ["bang"])
+        self.settle()
 
     def change_live(self, prop, value):
         self.live[prop] = value
         for node in self.nodes.values():
             if getattr(node, "observed_property", None) == prop and getattr(node, "observed", 0):
                 node.send(0, self.live_value(prop))
+        self.settle()

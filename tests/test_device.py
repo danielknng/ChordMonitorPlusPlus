@@ -59,6 +59,7 @@ def choose_key(sim, source, key=0, mode=0):
 
 def hold(sim, notes):
     sim.nodes[SORTED_NOTES].send(0, sorted(notes))
+    sim.settle()
     assert sim.unmodelled <= DISPLAY_ONLY_OBJECTS
 
 
@@ -207,3 +208,71 @@ def test_f_sharp_major_set_shows_f_sharp_major_without_touching_the_device(patch
     sim = load_in_live_set(patch, 6, MAJOR_SCALE)
     choose_key(sim, FOLLOW_LIVE)
     assert (menu_value(patch, sim, "Key"), menu_value(patch, sim, "Mode")) == ("F♯", "Major")
+
+
+MONITOR_MENUS = ["PrimaryChordRoot", "PrimaryChordQuality", "BassNote", "ChordDegree",
+                 "AlternateChordRoot", "AlternateChordQuality", "Alternate2ChordRoot",
+                 "Alternate2ChordQuality"]
+
+
+@pytest.mark.parametrize("name", MONITOR_MENUS)
+def test_turning_a_monitor_menu_snaps_back_to_the_detected_chord(patch, name):
+    sim = play(patch, [60, 63, 66, 69])
+    detected = menu_value(patch, sim, name)
+    sim.turn(name, 3)
+    assert menu_value(patch, sim, name) == detected
+
+
+def test_turning_a_monitor_menu_with_no_chord_held_keeps_it_blank(patch):
+    sim = load_in_live_set(patch, 0, MAJOR_SCALE)
+    sim.turn("PrimaryChordRoot", 5)
+    assert menu_value(patch, sim, "PrimaryChordRoot") == ""
+
+
+def test_turning_key_sets_the_device_key_and_leaves_the_set_scale(patch):
+    sim = load_in_live_set(patch, 6, MAJOR_SCALE)
+    hold(sim, [55, 59, 62])
+    sim.turn("Key", 7)
+    assert (menu_value(patch, sim, "KeySource"), menu_value(patch, sim, "Key")) == ("Manual", "G")
+    assert comment_text(sim, "obj-313") == "I" and sim.live["root_note"] == 6
+
+
+def test_turning_key_keeps_the_mode_of_the_set(patch):
+    sim = load_in_live_set(patch, 9, MINOR_SCALE)
+    sim.turn("Key", 2)
+    assert (menu_value(patch, sim, "Key"), menu_value(patch, sim, "Mode")) == ("D", "Minor")
+
+
+def test_key_turned_in_manual_stays_manual(patch):
+    sim = load_in_live_set(patch, 0, MAJOR_SCALE)
+    sim.turn("Key", 2)
+    sim.turn("Key", 4)
+    assert (menu_value(patch, sim, "KeySource"), menu_value(patch, sim, "Key")) == ("Manual", "E")
+
+
+def test_mode_follows_the_set_while_following_live(patch):
+    sim = load_in_live_set(patch, 0, MAJOR_SCALE)
+    sim.turn("Mode", 1)
+    assert menu_value(patch, sim, "Mode") == "Major"
+
+
+def test_mode_can_be_changed_with_a_manual_key(patch):
+    sim = load_in_live_set(patch, 9, MAJOR_SCALE)
+    sim.turn("Key", 9)
+    sim.turn("Mode", 1)
+    hold(sim, [60, 64, 67])
+    assert menu_value(patch, sim, "Mode") == "Minor" and comment_text(sim, "obj-313") == "III"
+
+
+def test_switching_back_to_follow_live_uses_the_set_root_again(patch):
+    sim = load_in_live_set(patch, 6, MAJOR_SCALE)
+    sim.turn("Key", 0)
+    sim.turn("KeySource", FOLLOW_LIVE)
+    assert menu_value(patch, sim, "Key") == "F♯"
+
+
+def test_key_restored_while_loading_does_not_leave_the_set_scale(patch):
+    sim = Sim(patch["patcher"])
+    sim.turn("Key", 3)
+    sim.load_device({"root_note": 7, "scale_intervals": MAJOR_SCALE})
+    assert menu_value(patch, sim, "KeySource") != "Manual" and menu_value(patch, sim, "Key") == "G"

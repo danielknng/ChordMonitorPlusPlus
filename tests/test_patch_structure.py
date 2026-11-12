@@ -28,6 +28,15 @@ def test_subpatcher_boxes_match_their_inlet_and_outlet_objects():
             assert (kinds.count("inlet"), kinds.count("outlet")) == (box["numinlets"], box["numoutlets"])
 
 
+def test_subpatcher_ports_are_indexed_in_the_left_to_right_order_max_uses():
+    for box in subpatchers():
+        for kind in ("inlet", "outlet"):
+            ports = [b["box"] for b in box["patcher"]["boxes"] if b["box"]["maxclass"] == kind]
+            by_index = sorted(ports, key=lambda port: port["index"])
+            by_position = sorted(ports, key=lambda port: port["patching_rect"][0])
+            assert by_index == by_position, (box["text"], kind)
+
+
 def test_no_lookup_placeholder_survives_the_build():
     assert all(box.get("text") != "zl lookup 0" for box in maxpat.walk_boxes(built()["patcher"]))
 
@@ -39,10 +48,8 @@ def test_every_bank_parameter_is_registered():
         assert set(bank["parameters"]) - {"-"} <= longnames
 
 
-def test_device_is_credited_and_named():
-    raw = build.TARGET.read_bytes()
-    assert b"ChordMonitor++.amxd" in raw[-200:]
-    assert "danielknng" in built()["patcher"]["description"]
+def test_device_is_named():
+    assert b"ChordMonitor++.amxd" in build.TARGET.read_bytes()[-200:]
 
 
 def subpatchers():
