@@ -248,7 +248,7 @@
 							"parameter_linknames": 1,
 							"parameter_longname": "AlternateChordQuality",
 							"parameter_mmax": 74,
-							"parameter_shortname": "Alternate Quality",
+							"parameter_shortname": "Alt Quality",
 							"parameter_type": 2
 						}
 					},
@@ -359,7 +359,7 @@
 							"parameter_linknames": 1,
 							"parameter_longname": "PrimaryChordQuality",
 							"parameter_mmax": 74,
-							"parameter_shortname": "Primary Quality",
+							"parameter_shortname": "Quality",
 							"parameter_type": 2
 						}
 					},
@@ -408,7 +408,7 @@
 							"parameter_linknames": 1,
 							"parameter_longname": "AlternateChordRoot",
 							"parameter_mmax": 12,
-							"parameter_shortname": "Alternate Root",
+							"parameter_shortname": "Alt Root",
 							"parameter_type": 2
 						}
 					},
@@ -493,7 +493,7 @@
 							"parameter_linknames": 1,
 							"parameter_longname": "PrimaryChordRoot",
 							"parameter_mmax": 12,
-							"parameter_shortname": "Primary Root",
+							"parameter_shortname": "Root",
 							"parameter_type": 2
 						}
 					},
@@ -27258,28 +27258,28 @@
 		"parameters": {
 			"obj-17": [
 				"AlternateChordRoot",
-				"Alternate Root",
+				"Alt Root",
 				0
 			],
 			"obj-18": [
 				"PrimaryChordQuality",
-				"Primary Quality",
+				"Quality",
 				0
 			],
 			"obj-19": [
 				"AlternateChordQuality",
-				"Alternate Quality",
+				"Alt Quality",
 				0
 			],
 			"obj-44": [
 				"PrimaryChordRoot",
-				"Primary Root",
+				"Root",
 				0
 			],
 			"parameterbanks": {
 				"0": {
 					"index": 0,
-					"name": "              ",
+					"name": "Chord",
 					"parameters": [
 						"PrimaryChordRoot",
 						"PrimaryChordQuality",
@@ -27287,18 +27287,18 @@
 						"ChordDegree",
 						"Key",
 						"Mode",
-						"AlternateChordRoot",
-						"AlternateChordQuality"
+						"KeySource",
+						"-"
 					]
 				},
 				"1": {
 					"index": 1,
 					"name": "Alternatives",
 					"parameters": [
+						"AlternateChordRoot",
+						"AlternateChordQuality",
 						"Alternate2ChordRoot",
 						"Alternate2ChordQuality",
-						"KeySource",
-						"-",
 						"-",
 						"-",
 						"-",
