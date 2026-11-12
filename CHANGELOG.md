@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.0
+
+- Push banks: Chord (chord, key and Key Source) and Alternatives (Alt and Alt2)
+- Shorter parameter names, so none are cut off on Push
+
 ## 1.1.0
 
 - Chord, Bass, Degree and Alt parameters are read-only on Push and in Live

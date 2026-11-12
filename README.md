@@ -68,8 +68,8 @@ Drop `ChordMonitor++.amxd` on a MIDI track or install it in your `User Library` 
 
 | Bank | Parameters |
 |------|------------|
-| 1 | Root, Quality, Bass, Degree, Key, Mode, Alt Root, Alt Quality |
-| 2 | Alt2 Root, Alt2 Quality, Key Source |
+| 1 Chord | Root, Quality, Bass, Degree, Key, Mode, Key Source |
+| 2 Alternatives | Alt Root, Alt Quality, Alt2 Root, Alt2 Quality |
 
 The chord parameters (Root, Quality, Bass, Degree and the Alt ones) are read only: turning them
 snaps back to the detected chord. Turning Key sets the key for this device only, switches Key
